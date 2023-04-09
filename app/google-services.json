@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "769033660702",
+    "project_id": "spoutchat-cb0fa",
+    "storage_bucket": "spoutchat-cb0fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769033660702:android:10f474786ecb8b4ee7010f",
+        "android_client_info": {
+          "package_name": "com.example.spoutchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769033660702-f7d518g3rt8m7h6bkfcve06qjn10fsj0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.spoutchat",
+            "certificate_hash": "e43f15a1d4dda30f3ff8bf548009d49a345640bc"
+          }
+        },
+        {
+          "client_id": "769033660702-7lsk3bai7hns3cuqp91rkv507evfs3i3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1QZlKHzCXA4vrZSWc_o9jLY6l9HphiNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769033660702-7lsk3bai7hns3cuqp91rkv507evfs3i3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

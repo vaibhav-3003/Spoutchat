@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="userModel"
+            type="com.example.spoutchat.UserModel" />
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:id="@+id/userInfoCard"
+        android:background="@drawable/rippleffect"
+        android:backgroundTint="#486461"
+        android:layout_height="@dimen/_60sdp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/showContactImage"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            imageUrl = "@{userModel.image}"
+            android:layout_centerVertical="true"
+            android:elevation="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/showContactImage"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/showContactUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{userModel.name , default = Username}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"/>
+
+            <TextView
+                android:id="@+id/showContactStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{userModel.status , default = Status}"
+                android:layout_below="@id/showContactUserName"
+                android:textColor="@color/secondary_text"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_12ssp"/>
+
+            <ImageView
+                android:id="@+id/showContactImgInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/round_info_24"
+                app:tint="@color/icon_color"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:contentDescription="@string/todo" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

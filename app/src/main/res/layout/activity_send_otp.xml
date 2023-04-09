@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/primary"
+    tools:context=".activities.SendOTP">
+
+    <ImageView
+        android:id="@+id/sendotpimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:src="@drawable/sendotp"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/verifyno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/verify_your_number"
+        android:fontFamily="@font/quattrocento_sans"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@+id/sendotpimg"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/_11ssp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/enterno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_your_number_for_verification"
+        android:fontFamily="@font/quattrocento_sans"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@+id/verifyno"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enterno"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginHorizontal="@dimen/_34sdp"
+        android:orientation="horizontal">
+
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/cpp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            app:ccpDialog_showFlag="false"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_showNameCode="false"
+            app:ccp_textGravity="CENTER"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            app:ccp_contentColor="@color/colorAccent"
+            app:ccp_autoFormatNumber="true"
+            app:ccp_showFlag="false" />
+
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:background="@color/colorAccent"/>
+
+
+        <EditText
+            android:id="@+id/number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/number"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold"
+            android:maxLength="10"
+            android:textCursorDrawable="@drawable/cursor_background"
+            android:letterSpacing="0.1"
+            android:textColor="@color/colorAccent"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone"
+            android:fontFamily="@font/quattrocento_sans"
+            android:backgroundTint="@color/colorAccent"
+            android:textColorHint="@color/colorAccent"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:autofillHints="" />
+
+    </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/generateOTPBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_37sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/quattrocento_sans"
+        android:text="@string/generate_otp"
+        android:textAllCaps="false"
+        android:textColor="@color/primary"
+        android:textSize="@dimen/_10ssp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/progressBarOfSendOTP"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:theme="@style/progressBarColor"
+        android:background="@drawable/circle_shape"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_below="@+id/layout"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:elevation="@dimen/_10sdp"
+        android:padding="10dp"/>
+
+</RelativeLayout>

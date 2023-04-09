@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/chat"
+        android:icon="@drawable/round_home_24"
+        android:title="Home"/>
+
+    <item android:id="@+id/contacts"
+        android:icon="@drawable/round_contacts_24"
+        android:title="Contacts"/>
+
+    <item android:id="@+id/profile"
+        android:icon="@drawable/round_person_24"
+        android:title="Profile"/>
+
+</menu>

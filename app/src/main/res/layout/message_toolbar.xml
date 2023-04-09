@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+        <variable
+            name="image"
+            type="String" />
+
+        <variable
+            name="activity"
+            type="com.example.spoutchat.activities.Message" />
+
+        <variable
+            name="status"
+            type="String" />
+    </data>
+
+
+
+    <com.google.android.material.appbar.MaterialToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/primary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/backButtonOfChatActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle_ripple_effect"
+                android:contentDescription="@string/todo"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:onClick="@{() -> activity.onBackPressed()}"
+                android:src="@drawable/round_arrow_back_24"
+                app:tint="@color/icon_color" />
+
+
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/showImageForChatActivity"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_margin="@dimen/_6sdp"
+                    imageUrl="@{image}" />
+
+                <TextView
+                    android:id="@+id/msgOnlineStatus"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    app:layout_anchorGravity="end|bottom"
+                    android:backgroundTint="#4CAF50"
+                    android:background="@{status.equals(`online`)? @drawable/circle_shape : null}"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    app:layout_anchor="@id/showImageForChatActivity"/>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+            <ImageButton
+                android:id="@+id/messageInfoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle_ripple_effect"
+                android:contentDescription="@string/todo"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:onClick="@{() -> activity.userInfo()}"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/round_info_24"
+                app:tint="@color/icon_color" />
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+</layout>

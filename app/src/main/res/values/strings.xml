@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">SpoutChat</string>
+    <string name="todo">TODO</string>
+    <string name="let_s_have">Let\'s Have</string>
+    <string name="chat_together">Chat Together!</string>
+    <string name="mobile_messaging_is_rapidly_becoming">Mobile Messaging is rapidly becoming</string>
+    <string name="the_primary_way_users_engage_socially">the primary way users engage socially</string>
+    <string name="on_mobile">on Mobile</string>
+    <string name="enter_your_number_for_verification">Enter your number for verification</string>
+    <string name="verify_your_number">Verify your number</string>
+    <string name="number">Number</string>
+    <string name="generate_otp">Generate</string>
+    <string name="we_have_sent_you_an_otp_for_verification_of_phone_number">We have sent you an OTP for verification of phone number</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="verify_otp">Verify</string>
+    <string name="label">label</string>
+    <string name="hey_i_am_using_spoutchat">Hey ! I am using spoutchat</string>
+    <string name="username">Username</string>
+    <string name="done">Done</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="this_is_not_your_username_or_pin_this_name_will_be_visible_to_your_chatfast_contacts">This is not your username or pin.This name will be visible to your SpoutChat contacts.</string>
+    <string name="name">Name</string>
+    <string name="online">Online</string>
+    <string name="phone">Phone</string>
+    <string name="about">About</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="status">Status</string>
+    <string name="enter_your_status">Enter your status</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="message">Message…</string>
+    <string name="gallery">Gallery</string>
+    <string name="contacts">Contacts</string>
+</resources>

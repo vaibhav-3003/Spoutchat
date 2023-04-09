@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#425C59</color>
+    <color name="primaryVariant">#306060</color>
+    <color name="colorAccent">#FFCEA3</color>
+    <color name="textColor">#999DA4</color>
+    <color name="ripple">#E0E0E0</color>
+    <color name="secondary_text">#C4CCC9</color>
+    <color name="icon_color">#C4CCC9</color>
+    <color name="edittextColor">#DDDDDD</color>
+    <color name="grey">#AAAAAA</color>
+    <color name="cardBackground">#f6f6f6</color>
+    <color name="black">#303030</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

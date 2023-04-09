@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".activities.DashBoard">
+
+    <com.example.spoutchat.BottomNavigationViewWithIndicator
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:elevation="8dp"
+        android:minHeight="?actionBarSize"
+        app:itemHorizontalTranslationEnabled="false"
+        app:itemIconSize="25dp"
+        app:itemRippleColor="@color/primary"
+        app:labelVisibilityMode="unlabeled"
+        app:itemActiveIndicatorStyle="@style/Widget.App.BottomNavigationView"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/bottom_navigation_color"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <FrameLayout
+        android:id="@+id/dashboardContainer"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/bottomNavigation"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

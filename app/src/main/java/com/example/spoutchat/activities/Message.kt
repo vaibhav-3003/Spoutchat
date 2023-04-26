@@ -5,7 +5,6 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.drawable.BitmapDrawable
 import android.os.Build
 import android.os.Bundle
 import android.text.Editable
@@ -15,7 +14,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewAnimationUtils
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -63,8 +61,6 @@ class Message : AppCompatActivity() {
     private var selectedImages:ArrayList<String>? = null
     private var databaseReference:DatabaseReference? = null
     private var firebaseRecyclerAdapter:FirebaseRecyclerAdapter<MessageModel,ViewHolder>? = null
-    private var sentImage:ImageView? = null
-    private var view:View? = null
 
     @SuppressLint("ClickableViewAccessibility")
     @RequiresApi(Build.VERSION_CODES.N)
@@ -270,6 +266,14 @@ class Message : AppCompatActivity() {
                 holder.viewDataBinding.setVariable(BR.messageImage,hisImage)
                 holder.viewDataBinding.setVariable(BR.message,model)
 
+                holder.itemView.setOnClickListener {
+                    if(model.getType()?.equals("image") == true){
+                        val intent = Intent(this@Message, ImagePreview::class.java)
+                        intent.putExtra("image",model.getMessage())
+                        intent.putExtra("date",model.getDate())
+                        startActivity(intent)
+                    }
+                }
 
             }
 
@@ -507,8 +511,8 @@ class Message : AppCompatActivity() {
             intent.putStringArrayListExtra("media",selectedImages)
 
             if (Build.VERSION.SDK_INT > Build.VERSION_CODES.O)
-                startForegroundService(intent);
-            else startService(intent);
+                startForegroundService(intent)
+            else startService(intent)
         }
     }
 

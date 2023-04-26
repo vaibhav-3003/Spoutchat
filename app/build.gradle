@@ -93,4 +93,7 @@ dependencies {
 
     //for compressing images
     implementation 'com.iceteck.silicompressorr:silicompressor:2.2.4'
+
+    //for zoom in and out images
+    implementation 'com.github.MikeOrtiz:TouchImageView:1.4.1'
 }

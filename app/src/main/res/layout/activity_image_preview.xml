@@ -5,21 +5,49 @@
         <variable
             name="image"
             type="String" />
+        <variable
+            name="activity"
+            type="com.example.spoutchat.activities.ImagePreview" />
     </data>
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.ImagePreview">
+        android:background="#000"
+        tools:context=".MainActivity">
 
-        <ImageView
+        <com.ortiz.touchview.TouchImageView
             android:id="@+id/imagePreview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            imageChat="@{image}"
+            android:src="@drawable/ic_launcher_background"
             android:contentDescription="@string/todo" />
 
-    </RelativeLayout>
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+            app:elevation="0dp"
+            android:background="#000"
+            android:alpha="0.7"
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:contentInsetStart="0dp"
+                android:backgroundTint="#000"
+                app:navigationIconTint="@color/white"
+                app:titleTextAppearance="@style/MyToolbarTitleStyle"
+                app:navigationIcon="@drawable/round_arrow_back_24"
+                app:title="@string/app_name" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </FrameLayout>
 </layout>

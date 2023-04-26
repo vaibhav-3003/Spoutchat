@@ -49,4 +49,9 @@
         <item name="cornerSize">@dimen/_30sdp</item>
     </style>
 
+    <style name="MyToolbarTitleStyle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">20sp</item>
+        <!-- Additional text appearance attributes can be added here -->
+    </style>
+
 </resources>

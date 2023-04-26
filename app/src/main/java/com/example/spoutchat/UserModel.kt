@@ -3,6 +3,7 @@ package com.example.spoutchat
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import androidx.databinding.BindingAdapter
+import com.ortiz.touchview.TouchImageView
 import de.hdodenhof.circleimageview.CircleImageView
 
 
@@ -119,6 +120,12 @@ class UserModel {
         @JvmStatic
         @BindingAdapter("imageChat")
         fun loadImage(view: ImageView, image: String?) {
+            Glide.with(view.context).load(image).into(view)
+        }
+
+        @JvmStatic
+        @BindingAdapter("touchImage")
+        fun loadImage(view: TouchImageView, image: String?) {
             Glide.with(view.context).load(image).into(view)
         }
 
